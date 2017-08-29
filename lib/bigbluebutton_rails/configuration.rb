@@ -52,7 +52,7 @@ module BigbluebuttonRails
 
       # Default method to get the dynamic metadata to use when creating a
       # conference in a room.
-      @get_dynamic_metadata = Proc.new{ |room| nil }
+      @get_dynamic_metadata = Proc.new{ |room, user| nil }
 
       # Selects a server to be used by `room` whenever it needs to make API calls.
       # By default, if no servers are available an exception is raised.
